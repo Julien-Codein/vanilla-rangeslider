@@ -4,6 +4,21 @@
 * [Project page and demos](http://ionden.com/a/plugins/ion.rangeSlider/)
 * [Support the plugin originator on GitHub sponsors](https://github.com/sponsors/IonDen)
 
+About the current fork:
+* Fix jquery dependency about e.originalEvent which is part of jquery, prefer use directement original event (therefore fix a last jquery dependency)
+* Fix addEventListener passive mode on touch (useless, and console logger): remove the passive mode
+* Give you an exportable package, in Sass environment just import as below
+
+```
+import IonRangeSlider from "vanilla-rangeslider"
+import "vanilla-rangeslider/css/rangeslider.css"
+
+// adapt selector
+document.querySelectorAll('.range-search-component').forEach(
+    element => new IonRangeSlider(element).init()
+)
+```
+
 ## Description
 
 * Removed the jQuery requirement from the original [ion.rangeSlider](https://github.com/IonDen/ion.rangeSlider) (Version: 2.3.1)
