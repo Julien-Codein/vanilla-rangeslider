@@ -583,7 +583,7 @@ const IonRangeSlider = function (element, initOptions= {}) {
             return;
         }
 
-        const x = e.pageX || e.originalEvent.touches && e.originalEvent.touches[0].pageX; // TODO
+        const x = e.pageX || e.touches && e.touches[0].pageX; // TODO
         coords.x_pointer = x - coords.x_gap;
         calc();
     };
@@ -628,7 +628,7 @@ const IonRangeSlider = function (element, initOptions= {}) {
      */
     const pointerDown = function (destination, e) {
         e.preventDefault();
-        const x = e.pageX || e.originalEvent.touches && e.originalEvent.touches[0].pageX; // TODO
+        const x = e.pageX || e.touches && e.touches[0].pageX; // TODO
         if (e.button === 2) {
             return;
         }
@@ -666,7 +666,7 @@ const IonRangeSlider = function (element, initOptions= {}) {
      */
     const pointerClick = function (destination, e) {
         e.preventDefault();
-        const x = e.pageX || e.originalEvent.touches && e.originalEvent.touches[0].pageX; // TODO
+        const x = e.pageX || e.touches && e.touches[0].pageX; // TODO
         if (e.button === 2) {
             return;
         }
@@ -2114,16 +2114,4 @@ const IonRangeSlider = function (element, initOptions= {}) {
     };
 };
 
-/**
- * Simple init function
- *
- * @param element {string|Element}
- * @param options {Object}
- */
-function ionRangeSlider(element, options = null) {
-    if (typeof element === 'string') {
-        element = document.querySelector(element);
-    }
-
-    return new IonRangeSlider(element, options).init();
-}
+export default IonRangeSlider
