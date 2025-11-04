@@ -5,7 +5,7 @@
 * [Support the plugin originator on GitHub sponsors](https://github.com/sponsors/IonDen)
 
 About the current fork:
-* Fix jquery dependency about e.originalEvent which is part of jquery, prefer use directement original event (therefore fix a last jquery dependency)
+* Fix jquery dependency about e.originalEvent which is part of jquery, prefer use directly original event (therefore fix a last jquery dependency)
 * Fix addEventListener passive mode on touch (useless, and console logger): remove the passive mode
 * Give you an exportable package, in Sass environment just import as below
 
