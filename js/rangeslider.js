@@ -505,37 +505,37 @@ const IonRangeSlider = function (element, initOptions= {}) {
         cache.win.addEventListener('touchend', pointerUp.bind(this));
         cache.win.addEventListener('mouseup', pointerUp.bind(this));
 
-        cache.line.addEventListener('touchstart', pointerClick.bind(this, 'click'), {passive: true});
+        cache.line.addEventListener('touchstart', pointerClick.bind(this, 'click'));
         cache.line.addEventListener('mousedown', pointerClick.bind(this, 'click'));
         cache.line.addEventListener('focus', pointerFocus.bind(this));
 
         if (options.drag_interval && options.type === "double") {
-            cache.bar.addEventListener('touchstart', pointerDown.bind(this, 'both'), {passive: true});
+            cache.bar.addEventListener('touchstart', pointerDown.bind(this, 'both'));
             cache.bar.addEventListener('mousedown', pointerDown.bind(this, 'both'));
         } else {
-            cache.bar.addEventListener('touchstart', pointerClick.bind(this, 'click'), {passive: true});
+            cache.bar.addEventListener('touchstart', pointerClick.bind(this, 'click'));
             cache.bar.addEventListener('mousedown', pointerClick.bind(this, 'click'));
         }
 
         if (options.type === "single") {
-            cache.single.addEventListener('touchstart', pointerDown.bind(this, 'single'), {passive: true});
-            cache.s_single.addEventListener('touchstart', pointerDown.bind(this, 'single'), {passive: true});
-            cache.shad_single.addEventListener('touchstart', pointerClick.bind(this, 'click'), {passive: true});
+            cache.single.addEventListener('touchstart', pointerDown.bind(this, 'single'));
+            cache.s_single.addEventListener('touchstart', pointerDown.bind(this, 'single'));
+            cache.shad_single.addEventListener('touchstart', pointerClick.bind(this, 'click'));
 
             cache.single.addEventListener('mousedown', pointerDown.bind(this, 'single'));
             cache.s_single.addEventListener('mousedown', pointerDown.bind(this, 'single'));
             cache.edge.addEventListener('mousedown', pointerClick.bind(this, 'click'));
-            cache.shad_single.addEventListener('touchstart', pointerClick.bind(this, 'click'), {passive: true});
+            cache.shad_single.addEventListener('touchstart', pointerClick.bind(this, 'click'));
         } else {
-            cache.single.addEventListener('touchstart', pointerDown.bind(this, null), {passive: true});
+            cache.single.addEventListener('touchstart', pointerDown.bind(this, null));
             cache.single.addEventListener('mousedown', pointerDown.bind(this, null));
 
-            cache.from.addEventListener('touchstart', pointerDown.bind(this, 'from'), {passive: true});
-            cache.s_from.addEventListener('touchstart', pointerDown.bind(this, 'from'), {passive: true});
-            cache.to.addEventListener('touchstart', pointerDown.bind(this, 'to'), {passive: true});
-            cache.s_to.addEventListener('touchstart', pointerDown.bind(this, 'to'), {passive: true});
-            cache.shad_from.addEventListener('touchstart', pointerClick.bind(this, 'click'), {passive: true});
-            cache.shad_to.addEventListener('touchstart', pointerClick.bind(this, 'click'), {passive: true});
+            cache.from.addEventListener('touchstart', pointerDown.bind(this, 'from'));
+            cache.s_from.addEventListener('touchstart', pointerDown.bind(this, 'from'));
+            cache.to.addEventListener('touchstart', pointerDown.bind(this, 'to'));
+            cache.s_to.addEventListener('touchstart', pointerDown.bind(this, 'to'));
+            cache.shad_from.addEventListener('touchstart', pointerClick.bind(this, 'click'));
+            cache.shad_to.addEventListener('touchstart', pointerClick.bind(this, 'click'));
 
             cache.from.addEventListener('mousedown', pointerDown.bind(this, 'from'));
             cache.s_from.addEventListener('mousedown', pointerDown.bind(this, 'from'));
